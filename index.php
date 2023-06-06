@@ -49,7 +49,7 @@ $postData = date("Y-m-d H:i:s");
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="title">PHPで掲示板アプリ</h1>
+    <h1 class="title">お笑い掲示板</h1>
     <hr>
     <div clas="boardWrapper">
        <section>
