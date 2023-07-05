@@ -20,10 +20,12 @@
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
         				<ul class="nav navbar-nav">
+        					<li><a href="https://FM842mnshagaki.github.io/radio70/index.html">home</a></li>
         					<li class="active"><a href="https://FM842mnshagaki.github.io/radio70/お笑いラジオメールアドレス.html">ラジオメールアドレス</a></li>
         					<li><a href="https://FM842mnshagaki.github.io/radio70/大喜利.html">大喜利</a></li>
         					<li><a href="https://FM842mnshagaki.github.io/radio70/keijiban.html">掲示板</a></li>
-                        <li class="active"><a href="file:///C:/Users/yutan/Downloads/startbootstrap-the-big-picture-gh-pages/startbootstrap-the-big-picture-gh-pages/%E3%83%A1%E3%82%A4%E3%83%B3%E7%94%BB%E9%9D%A2.html#list">Home</a></li>
+                            <li><a href="#">今日の芸人の名言</a></li>
+                            <li><a href="#">似ている芸人診断サイト</a></li>
                         <li><a href="#monday">月</a></li>
                         <li><a href="#tuesday">火</a></li>
                         <li><a href="#wednesday">水</a></li>
@@ -37,7 +39,11 @@
             </div>
         </nav>  
    
-  
+ <script>
+  let x = 100;
+  function larger()  { x *= 1.2; document.body.style.fontSize = x + '%'; }
+  function smaller() { x /= 1.2; document.body.style.fontSize = x + '%'; }
+</script>
 
 
 <h2 id="table">番組表</h2>
@@ -307,37 +313,37 @@
 
 
 
-	<h2 id="form">お問い合わせ</h2>
-
-<div class="form-group">
-					<label class="col-sm-2 control-label"for="select">内容</label>
-					<div class="col-sm-10">
-    					<select class="form-control" name="select" id="select">
-    					  <option>情報の誤りについて</option>
-    					  <option>情報の追加について</option>
-    					  <option>その他</option>
-    					</select>
-    				</div>
+	<strong id="form">お問い合わせフォーム</strong>
+	
+<form class="form-horizontal" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfgeVP_m9_Rr9B12ZHwUBDXdca8myWGnANt64ElfZ5d2Tj-3g/formResponse" >
+  <div class="form-group">
     
-			<form class="form-horizontal" action="#" method="post">
-				<div class="form-group">
-					<label class="col-sm-2 control-label" for="title">タイトル</label>
-					<div class="col-sm-10">
-					    <input type="text" class="form-control" name="comment" id="title">
-				    </div>
-				</div>
-            	<div class="form-group">
-            		<label class="col-sm-2 control-label" for="message">メッセージ</label>
-            		<div class="col-sm-10">
-            			<textarea class="form-control" rows="3"></textarea>
-            		</div>
-            	</div>
-				</div>
-				<div class="form-group">
-		            <div class="col-sm-offset-2 col-sm-10">
-			            <button type="submit">送信</button>
-            		</div>
-            	</div>
+    <div class="col-sm-10">
+      
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="title">タイトル</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="entry.1708251" id="title">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="message">メッセージ</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" name="entry.360901002" rows="3"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" a class="btn btn-primary" >送信</button>
+    </div>
+  </div>
+
+                 <div>
+  <button type="button" a class="btn btn-primary"  onclick="smaller()">小さく</button>
+  <button type="button" a class="btn btn-primary"  onclick="larger()">大きく</button>
+</div>
             </form>
 
 <a class="btn btn-primary" href="#">トップに戻る</a>
@@ -350,9 +356,8 @@
 form{
     padding:100px
 }
-<style>
 
 
 
-
-   
+</style>
+</head>
