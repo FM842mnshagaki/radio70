@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>性格診断</title>
+    	<!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">オールナイトニッポンまとめ</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+         	<li><a href="https://FM842mnshagaki.github.io/radio70/index.html">home</a></li>
+        					<li class="active"><a href="https://FM842mnshagaki.github.io/radio70/お笑いラジオメールアドレス.html">ラジオメールアドレス</a></li>
+        					<li><a href="https://FM842mnshagaki.github.io/radio70/大喜利.html">大喜利</a></li>
+        					<li><a href="https://FM842mnshagaki.github.io/radio70/keijiban.html">掲示板</a></li>
+                            <li><a href="#">今日の芸人の名言</a></li>
+                            <li><a href="#">似ている芸人診断サイト</a></li>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+      <h1>似ている芸人診断</h1>
+  <p>以下の質問に回答してください。</p>
+  <form>
+    <label>自分は明るいほうだと思う : </label>
+    <input type="radio" name="q1" value="A">当てはまる
+    <input type="radio" name="q1" value="B">当てはまらない
+   
+    <br>
+
+    <label>プレッシャーがかかる状況が好きだ : </label>
+    <input type="radio" name="q2" value="A">当てはまる
+    <input type="radio" name="q2" value="B">当てはまらない
+    
+    <br>
+
+    <label>楽観的だ : </label>
+    <input type="radio" name="q3" value="A">当てはまる
+    <input type="radio" name="q3" value="B">当てはまらない
+    
+    <br>
+
+    <label>スポーツが好きだ : </label>
+    <input type="radio" name="q4" value="A">当てはまる
+    <input type="radio" name="q4"  value="B">当てはまらない
+   
+   <br>
+
+   <label>面倒見がいい : </label>
+    <input type="radio" name="q5" value="A">当てはまる
+    <input type="radio" name="q5" value="B">当てはまらない
+   
+    <br>
+
+
+       <label>リーダーを任されることが多い : </label>
+    <input type="radio" name="q6" value="A">当てはまる
+    <input type="radio" name="q6" value="B">当てはまらない
+   
+    <br>
+
+       <label>刺激を求める : </label>
+    <input type="radio" name="q7" value="A">当てはまる
+    <input type="radio" name="q7" value="B">当てはまらない
+
+    <br>
+
+       <label>思い悩むことが少ない : </label>
+    <input type="radio" name="q8" value="A">当てはまる
+    <input type="radio" name="q8" value="B">当てはまらない
+   
+    <br>
+
+       <label>気分の浮き沈みが激しくない : </label>
+    <input type="radio" name="q9" value="A">当てはまる
+    <input type="radio" name="q9" value="B">当てはまらない
+   
+    <br>
+       <label>どちらかというとアウトドア派だ : </label>
+    <input type="radio" name="q10" value="A">当てはまる
+    <input type="radio" name="q10" value="B">当てはまらない
+   
+    <br>
+      </div>
+
+
+  <style>
+    body {
+      padding: 20px;
+    }
+  </style>
+  <script>
+    function calculatePersonality() {
+      var q1 = document.querySelector('input[name="q1"]:checked').value;
+      var q2 = document.querySelector('input[name="q2"]:checked').value;
+      var q3 = document.querySelector('input[name="q3"]:checked').value;
+      var q4 = document.querySelector('input[name="q4"]:checked').value;
+      var q5 = document.querySelector('input[name="q5"]:checked').value;
+      var q6 = document.querySelector('input[name="q6"]:checked').value;
+      var q7 = document.querySelector('input[name="q7"]:checked').value;
+      var q8 = document.querySelector('input[name="q8"]:checked').value;
+      var q9 = document.querySelector('input[name="q9"]:checked').value;
+      var q10 = document.querySelector('input[name="q10"]:checked').value;
+
+      var points = {
+        "A": 1,
+        "B": 0
+      };
+
+      var totalPoints = 0;
+      if (points.hasOwnProperty(q1)) {
+        totalPoints += points[q1];
+      }
+      if (points.hasOwnProperty(q2)) {
+        totalPoints += points[q2];
+      }
+      if (points.hasOwnProperty(q3)) {
+        totalPoints += points[q3];
+      }
+      if (points.hasOwnProperty(q4)) {
+        totalPoints += points[q4];
+      }
+      if (points.hasOwnProperty(q5)) {
+        totalPoints += points[q5];
+      }
+      if (points.hasOwnProperty(q6)) {
+        totalPoints += points[q6];
+      }
+      if (points.hasOwnProperty(q7)) {
+        totalPoints += points[q7];
+      }
+      if (points.hasOwnProperty(q8)) {
+        totalPoints += points[q8];
+      }
+      if (points.hasOwnProperty(q9)) {
+        totalPoints += points[q9];
+      }
+      if (points.hasOwnProperty(q10)) {
+        totalPoints += points[q10];
+      }
+
+      var personalityType;
+      if (totalPoints > 9) {
+        personalityType = "錦鯉の長谷川まさのり";
+      } else if (totalPoints > 8) {
+        personalityType = "とにかく明るい安村";
+      } else if (totalPoints > 7) {
+        personalityType = "チョコレートプラネットの松尾";
+      } else if (totalPoints > 6) {
+        personalityType = "NON STYLEの井上";
+      } else if (totalPoints > 5) {
+        personalityType = "ラランドサーヤ";
+      } else if (totalPoints > 4) {
+        personalityType = "マヂカルラブリーの野田クリスタル";
+      } else if (totalPoints > 3) {
+        personalityType = "バカリズム";
+      } else if (totalPoints > 2) {
+        personalityType = "南海キャンディーズの山里亮太";
+      } else if (totalPoints > 1) {
+        personalityType = "オードリーの若林";
+      } else {
+        personalityType = "和牛の水田";
+      }
+
+      var redirectUrl = "result.html?personality=" + encodeURIComponent(personalityType);
+      window.location.href = redirectUrl;
+    }
+  </script>
+   <button type="button" a class="btn btn-primary" onclick="calculatePersonality()">診断する</button>
+</head>
