@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html lang="ja">
-    <head>
-    	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
 
-    	<title>お笑い専門サイト</title>
-    	<!-- Bootstrap -->
+
+<div class="container">
+    		<div class="starter-template">
+    			<h1>お笑い専門サイト</h1>
+    			<p class="lead">こんにちは</p>
+    			<img class="img-responsive center-block" src="https://FM842mnshagaki.github.io/radio70/漫才師イラスト.jpg" width="300" height="50">
+    			
+            </div>
+        </div>
+   <div class="container">
+    		<div class="starter-template">
+    			
+    <style>
+        #image {
+            width: 20%;
+            height: auto;
+        }
+
+        .brush-font {
+            font-family: 'Your-Brush-Font', cursive;
+        }
+
+        .custom-font {
+            font-size: 100px;
+        }
+
+        /* 新しいスタイル */
+        .custom-text {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<!-- Bootstrap -->
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     	<style>
     		body {
     			padding-top: 50px;
-    			background-color: lightgray;
+    			background-color: white;
     		}
     		.starter-template {
     			padding: 40px 15px;
@@ -31,27 +61,115 @@
         			</div>
         			<div id="navbar" class="collapse navbar-collapse">
         				<ul class="nav navbar-nav">
-					        <li><a href="https://FM842mnshagaki.github.io/radio70/index.html">home</a></li>
+						<li><a href="https://FM842mnshagaki.github.io/radio70/index.html">home</a></li>
         					<li class="active"><a href="https://FM842mnshagaki.github.io/radio70/お笑いラジオメールアドレス.html">ラジオメールアドレス</a></li>
         					<li><a href="https://FM842mnshagaki.github.io/radio70/大喜利.html">大喜利</a></li>
-        					<li><a href="https://FM842mnshagaki.github.io/radio70/keijiban.html">掲示板</a></li>
-                                                <li><a href="https://FM842mnshagaki.github.io/radio70/芸人の名言.html">今日の芸人の名言</a></li>
-                                                <li><a href="https://FM842mnshagaki.github.io/radio70/性格診断2.html">似ている芸人診断サイト</a></li>
+                            <li><a href="https://FM842mnshagaki.github.io/radio70/性格診断2.html">似ている芸人診断サイト</a></li>
         				</ul>
         			</div>
         		</div>
         	</nav>
-    	<div class="container">
-    		<div class="starter-template">
-    			<h1>お笑い専門サイト</h1>
-    			<p class="lead">こんにちは</p>
-    			<img class="img-responsive center-block" src="https://FM842mnshagaki.github.io/radio70/漫才師イラスト.jpg">
-    			
-				
-    			<a class="btn btn-primary" href="#">ページ上部へ</a>
+    <h1 style="font-size: 30px;">今日の芸人の名言</h1>
+
+    <div>
+        <p id="text"></p>
+        <img id="image" src="" alt="">
+    </div>
+
+    <script>
+        // 文章と写真のリスト
+        const items = [
+            {
+                text: "自分の機嫌は自分で取る。人に取ってもらおうとしない。（みやぞん）",
+                image: "https://img.fumumu.net/wp-content/uploads/2022/07/fumumu20220704miyazon.jpeg"
+            },
+            {
+                text: "やさしさを持った人は、それ以上の悲しみを持っている。（明石家さんま）",
+                image: "https://newsatcl-pctr.c.yimg.jp/t/amd-img/20230701-00000264-spnannex-000-4-view.jpg?pri=l&w=640&h=640&exp=10800"
+            },
+            {
+                text: "「こうじゃなきゃ」を捨てれば自分に合った場所は見つかる。（フワちゃん）",
+                image: "https://fuwachan.com/assets/images/about/about-1-1-1.png"
+            },
+            {
+                text: "言葉遣いは無料でできるオシャレ。（カズレーザー）",
+                image: "https://corp.voicy.jp/wp-content/uploads/2021/08/39c4bcce57eebff10f337aa5f9624c6e.jpg"
+            },
+            {
+                text: "最初は、裏付けのない自信と夢しかないんですよ。（上田晋也）",
+                image: "https://newsatcl-pctr.c.yimg.jp/t/amd-img/20220508-00010000-ytokushu-000-2-view.jpg?exp=10800"
+            },
+            {
+                text: "一生懸命頑張っていれば、時間がかかるかもしれないけど、きっと誰かが見ていてくれるから。（出川哲郎）",
+                image: "https://img.sirabee.com/wp-content/uploads/2020/11/sirabee20201109degawatetsuro-scaled-1200x800.jpg"
+            },
+            {
+                text: "100点は無理かもしれん。でもMAXなら出せるやろ。（松本人志）",
+                image: "https://dol.ismcdn.jp/mwimgs/e/4/500/img_e439a720e9cdeb5752ff9b2c58cd21ee110491.jpg"
+            },
+            {
+                text: "やらなきゃいけないのは、まずやること。（中田敦彦）",
+                image: "https://pbs.twimg.com/ext_tw_video_thumb/1663193245210546176/pu/img/jVgudaNiiTcs3Ody.jpg:large"
+            },
+            {
+                text: "自分が好きなことがわかると、他人の好きなことも尊重できる（若林正恭）",
+                image: "https://news.mynavi.jp/article/20200429-1026008/images/001.jpg"
+            },
+            {
+                text: "「サボったらオレは終わる」っていう危機感をいつも持っています。（山里亮太）",
+                image: "https://www.crank-in.net/img/db/238069057119428_650.jpg"
+            },
+            {
+                text: "批判は割と簡単だ。だって完璧なものってこの世にはないから。（若林正恭）",
+                image: "https://myjitsu.jp/wp-content/uploads/2021/05/ordly_wakabayashi.jpg"
+            },
+            {
+                text: "やらない理由なんて無限にある。やる理由はあまりない。それでもやるんだよ。（有吉弘行）",
+                image: "https://newsatcl-pctr.c.yimg.jp/t/amd-img/20230702-00268366-tospoweb-000-3-view.jpg?pri=l&w=640&h=426&exp=10800"
+            },
+            {
+                text: "転ばぬ先の杖？そんな物へし折ってくれるわ！（若林正恭）",
+                image: "https://contents.oricon.co.jp/upimg/news/20170430/2090053_201704300393320001493496016c.jpg"
+            },
+            {
+                text: "ネガティブな人が人生を生き抜くためには、没頭できる仕事や趣味は命綱と同等の価値がある。（若林正恭）",
+                image: "https://contents.oricon.co.jp/cdn-cgi/image/width=750,quality=85,format=auto/upimg/news/20201008/2173823_202010080096580001602121761e.jpg"
+            },
+            {
+                text: "努力する道を選ぶほうがかっこいい。（なかやまきんに君）",
+                image: "https://tk.ismcdn.jp/mwimgs/6/d/570/img_6d3e329e3d1dc4a6d7cf7883993430bc413016.jpg"
+            },
+            {
+                text: "抹茶オレを飲みました。マッチョオレ　俺マッチョ（なかやまきんに君）",
+                image: "https://pbs.twimg.com/media/Fe29cpZaYAAHh8D?format=jpg&name=large"
+            },
+            {
+                text: "（吉本興業退社の理由は？）より面白くなるために、裸一貫で退社いたしました。まさに、裸の大将！ 裸の大将！ パワー！（なかやまきんに君）",
+                image: "https://cdn.images-dot.com/S2000/upload/2022010600026_1.jpg?update=20220110075035&width=850&fit=bounds"
+            },
+            {
+                text: "僕は朝の「プロテイン」は一番大切だと言いたい（なかやまきんに君）",
+                image: "https://tshop.r10s.jp/allera/cabinet/protein/theprotein_bunpo6set.jpg"
+            }
+        ];
+
+        // ページ読み込み時の処理
+        window.addEventListener('load', function () {
+            // ランダムな項目を選択
+            const randomItem = items[Math.floor(Math.random() * items.length)];
+
+            // 文章を表示
+            const textElement = document.getElementById("text");
+            textElement.innerHTML = randomItem.text;
+
+            // 写真を表示
+            const imageElement = document.getElementById("image");
+            imageElement.src = randomItem.image;
+            imageElement.alt = randomItem.text;
+        });
+    </script>
+</body>
+</html>
+<a class="btn btn-primary" href="#">ページ上部へ</a>
             	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-            </div>
-        </div>
-    </body>
-</html>        		
