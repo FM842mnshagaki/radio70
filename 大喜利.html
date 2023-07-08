@@ -36,8 +36,6 @@
                             <li><a href="https://FM842mnshagaki.github.io/radio70/index.html">home</a></li>
         					<li class="active"><a href="https://FM842mnshagaki.github.io/radio70/お笑いラジオメールアドレス.html">ラジオメールアドレス</a></li>
         					<li><a href="https://FM842mnshagaki.github.io/radio70/大喜利.html">大喜利</a></li>
-        					<li><a href="https://FM842mnshagaki.github.io/radio70/keijiban.html">掲示板</a></li>
-                            <li><a href="https://FM842mnshagaki.github.io/radio70/芸人の名言.html">今日の芸人の名言</a></li>
                             <li><a href="https://FM842mnshagaki.github.io/radio70/性格診断2.html">似ている芸人診断サイト</a></li>
         				</ul>
         			</div>
@@ -45,12 +43,12 @@
         	</nav>
     	<div class="container">
     		<div class="starter-template">
-    			<h1>お笑い専門サイト</h1>
-    			<p class="lead">こんにちは</p>
+    			<h1>大喜利道場</h1>
+    			<p class="lead">以下のお題に答えてみてね</p>
     			
 
 <body>
-<font size="7">大喜利</font>
+
 <py-script>
 import random
 print('こんな○○は嫌だ編')
@@ -62,7 +60,8 @@ tango = ["犬", "猫", "ファミレス", "コンビニ", "病院", "iphone","�
 x = random.choice(tango)
 print("こんな"+x+"は嫌だ、どんなの？")
 </py-script>
-<button onclick="window.location.reload();">お題変更</button> 
+<button onclick="window.location.reload();"　a class="btn btn-primary">お題変更</button> 
+
 </body>
 </html>
 
@@ -70,7 +69,7 @@ print("こんな"+x+"は嫌だ、どんなの？")
     <p><input name="entry.1218821658" placeholder="名前" value="名無し" required></p>
     <p><input name="entry.736144174" placeholder="メールアドレス" type="email"></p>
     <p><textarea name="entry.509064591" placeholder="コメント" rows="10" cols="40" maxlength="400" id="wcheck" required></textarea></p>
-    <input type="submit" id="submitbutton" value="送信">
+    <input type="submit" id="submitbutton"　a class="btn btn-primary" value="送信">
     </form>
     <iframe onload='if(submitted){window.location="";}' id=hidden_iframe name=hidden_iframe style=display:none></iframe>
     
@@ -106,3 +105,7 @@ print("こんな"+x+"は嫌だ、どんなの？")
         d3.select("#comments").html(text);
     });
     </script>
+	<style>
+.btn-primary {
+    background: black; 
+    color: white;
