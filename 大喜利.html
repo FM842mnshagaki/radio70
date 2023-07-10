@@ -3,7 +3,7 @@
     <head>
     	<meta charset="utf-8">
         <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,7 +27,9 @@
         			<div class="navbar-header">
         				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         					<span class="sr-only">Toggle navigation</span>
+        					
         				</button>
+        				
         			</div>
         			<div id="navbar" class="collapse navbar-collapse">
         				<ul class="nav navbar-nav">
@@ -58,7 +60,7 @@ tango = ["犬", "猫", "ファミレス", "コンビニ", "病院", "iphone","�
 x = random.choice(tango)
 print("こんな"+x+"は嫌だ、どんなの？")
 </py-script>
-<button onclick="window.location.reload();" class="btn btn-primary">お題変更</button> 
+<button onclick="window.location.reload();"　a class="btn btn-primary">お題変更</button> 
 
 </body>
 </html>
@@ -67,11 +69,11 @@ print("こんな"+x+"は嫌だ、どんなの？")
     <p><input name="entry.1218821658" placeholder="名前" value="名無し" required></p>
     <p><input name="entry.736144174" placeholder="メールアドレス" type="email"></p>
     <p><textarea name="entry.509064591" placeholder="コメント" rows="10" cols="40" maxlength="400" id="wcheck" required></textarea></p>
-    <input type="submit" id="submitbutton" class="btn btn-primary" value="送信">
-</form>
-<iframe onload='if(submitted){window.location="";}' id=hidden_iframe name=hidden_iframe style=display:none></iframe>
-
-<script type="text/javascript">
+    <input type="submit" id="submitbutton"　a class="btn btn-primary" value="送信">
+    </form>
+    <iframe onload='if(submitted){window.location="";}' id=hidden_iframe name=hidden_iframe style=display:none></iframe>
+    
+    <script type="text/javascript">
     var NGComments = ["死ね","バカ",".exe"]; // 簡易的なNGワードの設定
     var regex = new RegExp(NGComments.join("|"));
     function test(wcheck) {
@@ -90,30 +92,19 @@ print("こんな"+x+"は嫌だ、どんなの？")
         }
         return submitted=!0;
     }
-</script>
-
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<div id="comments"></div>
-<script>
+    </script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <div id="comments"></div>
+    <script>
     d3.csv("https://docs.google.com/spreadsheets/d/1b3zLDe0nUiKj0X-Eptf1PIeLug1aDaliS1AUd7sPBw4/export?format=csv&range=A3:D", function(error, data){
         var text = "";
         for(var i=0; i<data.length; i++){
-            var commentId = "comment-" + i;
-            text += (i+1) + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
-            text += "<button onclick=\"addLike('" + commentId + "')\">いいね</button> <span id=\"likeCount-" + commentId + "\">0</span><br><br>";
+            text += i+1 + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
         }
-        document.getElementById("comments").innerHTML = text;
+        d3.select("#comments").html(text);
     });
-
-    function addLike(commentId) {
-        var countElement = document.getElementById("likeCount-" + commentId);
-        var count = parseInt(countElement.textContent) || 0;
-        count++;
-        countElement.textContent = count;
-    }
-</script>
-
-<style>
-    .btn-primary {
-        background: black; 
-        color: white;
+    </script>
+	<style>
+.btn-primary {
+    background: black; 
+    color: white;
