@@ -3,8 +3,30 @@
     <head>
     	<meta charset="utf-8">
         <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script src="https://FM842mnshagaki.github.io/radio70/iine.js"></script>
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+	    <div id="postsContainer">
+  <!-- 投稿一覧を表示するためのコンテナ -->
+</div>
+
+<!-- Ajaxリクエストに使用するJavaScriptライブラリの読み込み -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  // いいねボタンがクリックされたときの処理
+  function likePost(postId) {
+    $.ajax({
+      url: '/like',  // いいね処理を行うエンドポイントのURL
+      method: 'POST',
+      data: { postId: postId },
+      success: function(response) {
+        // いいね数の表示を更新
+        $('#likeCount-' + postId).text(response.likes);
+      },
+      error: function(error) {
+        console.log(error);
+      }
+    });
+  }
+</script>
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 
